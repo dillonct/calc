@@ -4,4 +4,5 @@ I wanted to calculate arithmetic expressions on my terminal and so I wrote this 
 
 Examples:
 > calc 1+1
+> 
 > calc "(1+1)/2"
