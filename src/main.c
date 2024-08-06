@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     }
     switch (argc) {
         case 1:
-            fprintf(stdout, "calc - a terminal based calculator\n\nMissing an argument, to use, write the following: calc [expression]\n");
+            fprintf(stdout, "calc - a terminal based calculator\n\nMissing an argument, to use, write the following: calc [expression] like so:\n\t> calc 1+1\n\t> calc \"(1+1)/2\"\n\t* if using parenthesis for precedence, use quotation marks around the expression\n");
             break;
         case 2: 
             run(argv[1]);

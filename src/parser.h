@@ -3,5 +3,4 @@
 
 float parse_result();
 
-
 #endif

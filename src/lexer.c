@@ -89,12 +89,13 @@ Token next_token() {
 
                 return create_token(TOKEN_NUMBER, lexer.input + start_index, length);
             } 
-
-            // if it ever reaches here, there must be an unknown token
-            // will be handled in parser
-            next_char();
-            return create_token(TOKEN_ERROR, lexer.input + lexer.index, 1);
+            break;
         }
+
+        // if it ever reaches here, there must be an unknown token
+        // will be handled in parser
+        next_char();
+        return create_token(TOKEN_ERROR, lexer.input + lexer.index, 1);
 }
 
 Token peek_token() {
