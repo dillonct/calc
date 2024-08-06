@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include "lexer.h"
 #include "parser.h"
-int run(char* input);
+
+void run(char* input) {
+    init_lexer(input);
+    printf("%g\n", parse_result());
+}
 
 int main(int argc, char* argv[]) {
+    if(!1) {
+        printf("hi");
+    }
     switch (argc) {
         case 1:
             fprintf(stdout, "calc - a terminal based calculator\n\nMissing an argument, to use, write the following: calc [expression]\n");
@@ -15,20 +22,9 @@ int main(int argc, char* argv[]) {
             fprintf(stdout, "[ERROR] Too many arguments. Enter the expression without any whitespace.\n");
             break;
     }
+
+    return 0;
 }
 
-void print_formatted_number(float num) {
-    char buffer[100];
-    snprintf(buffer, sizeof(buffer), "%.15g", num);
-
-    printf("%s\n", buffer);
-}
-
-int run(char* input) {
-    init_lexer(input);
-    printf("%g\n", parse_expression());
-
-    return 0; // placeholder
-}
 
 

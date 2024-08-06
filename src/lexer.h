@@ -14,10 +14,13 @@ typedef enum {
 
 typedef struct {
     TokenType type;
-    float number;
+    const char* start;
+    int length;
 } Token;
 
 void init_lexer(const char* input);
 Token next_token();
 Token peek_token();
+const char* get_input();
+
 #endif
